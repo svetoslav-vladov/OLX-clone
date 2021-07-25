@@ -1,0 +1,144 @@
+.headerSection{
+  background: #002f34;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  position: fixed;
+  transition: transform 0.5s cubic-bezier(0.8, 0.2, 0.2, 0.8);
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.container{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo{
+  position: relative;
+}
+
+.logoLink {
+  width: 71px;
+  height: 41px;
+  display: block;
+  left: 15px;
+  top: 15px;
+  z-index: 10;
+  text-indent: -1000em;
+}
+
+.ologo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(12px, 15px);
+  content: '';
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 12px #24e5db;
+  animation: logo-o .4s ease .2s both;
+}
+
+.llogo {
+  width: 10px;
+  top: 0;
+  bottom: 0;
+  background: #23e5db;
+  position: absolute;
+  left: 37px;
+  animation: logo-l .4s ease .3s both;
+}
+
+.xlogo {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(51px, 10px);
+  animation: logo-x .4s ease .2s both;
+}
+
+.xlogo:before, .xlogo:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 65%;
+  height: 100%;
+  background: #24e5db;
+  transform: skewX(45deg) translate(-50%, 0);
+  animation: logo-x-before .4s ease .3s both;
+}
+
+.xlogo:before {
+  animation: logo-x-before .4s ease .3s both;
+}
+
+.xlogo:after {
+  animation: logo-x-after .4s ease .3s both;
+}
+
+@keyframes logo-o {
+  0% {
+      transform: translate(37px, 15px) scale(0.3);
+  }
+
+  100% {
+      transform: translate(12px, 15px) scale(1);
+  }
+}
+
+@keyframes logo-l {
+  0% {
+      top: 10px;
+      bottom: 11px;
+  }
+
+  100% {
+      top: 0;
+      bottom: 0;
+  }
+}
+
+@keyframes logo-x {
+  0% {
+      transform: translate(27px, 10px);
+  }
+
+  100% {
+      transform: translate(51px, 10px);
+  }
+}
+
+@keyframes logo-x-before {
+  0% {
+      transform: none;
+  }
+
+  100% {
+      transform: skewX(45deg) translate(-50%, 0);
+  }
+}
+
+@keyframes logo-x-after {
+  0% {
+      transform: none;
+  }
+
+  100% {
+      transform: skewX(-45deg) translate(-50%, 0);
+  }
+}
