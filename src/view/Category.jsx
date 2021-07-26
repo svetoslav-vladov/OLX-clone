@@ -2,9 +2,9 @@ const Category = (props) => {
   const { categoryName, id } = props.match.params;
 
   return (
-    <div>
-      <p>Category: {categoryName}</p>
-      <p>ID: {id}</p>
+    <div className="container">
+      <h1>{categoryName}</h1>
+      <div>test</div>
     </div>
   );
 }
