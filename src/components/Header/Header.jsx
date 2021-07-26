@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Nav from '../Nav/Nav';
 import Style from './Header.module.css';
-import classNames from 'classnames';
 
 const Header = () => {
   return (
